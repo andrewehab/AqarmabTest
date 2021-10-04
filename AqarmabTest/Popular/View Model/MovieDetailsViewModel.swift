@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import RxCocoa
+
+class MovieDetailsViewModel {
+    
+    //MARK: - Outlets
+    var selectedMovieBehaviorRelay = BehaviorRelay<Movie?>(value: nil)
+    
+}

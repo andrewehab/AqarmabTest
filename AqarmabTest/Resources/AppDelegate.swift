@@ -2,15 +2,13 @@
 //  AppDelegate.swift
 //  AqarmabTest
 //
-//  Created by AnDy on 03/10/2021.
+//  Created by AnDy on 04/10/2021.
 //
 
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

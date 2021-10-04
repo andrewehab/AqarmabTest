@@ -1,8 +1,8 @@
 //
 //  UICollectionViewExtention.swift
-//  TestRxSwift
+//  AqarmabTest
 //
-//  Created by AnDy on 10/07/2021.
+//  Created by AnDy on 04/10/2021.
 //
 
 import Foundation

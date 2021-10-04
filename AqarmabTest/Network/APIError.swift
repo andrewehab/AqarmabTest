@@ -1,8 +1,8 @@
 //
 //  APIError.swift
-//  TestRxSwift
+//  AqarmabTest
 //
-//  Created by AnDy on 29/06/2021.
+//  Created by AnDy on 04/10/2021.
 //
 
 import Foundation

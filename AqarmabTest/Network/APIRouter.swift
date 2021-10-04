@@ -1,8 +1,8 @@
 //
 //  APIRouter.swift
-//  TestRxSwift
+//  AqarmabTest
 //
-//  Created by AnDy on 29/06/2021.
+//  Created by AnDy on 04/10/2021.
 //
 
 import Foundation
@@ -10,22 +10,23 @@ import Alamofire
 
 enum APIRouter: URLRequestConvertible {
     
-    case generateVideChatToken(channelId: String)
+    case getPopularMovies(page: Int)
+    
     
     //MARK: - Http Method
     private var method: HTTPMethod {
         switch self {
-        case .generateVideChatToken:
+        case .getPopularMovies:
             return .get
         }
     }
     
+    
     //MARK: - Path
-    //The path is the part following the base url
     private var path: String {
         switch self {
-        case .generateVideChatToken:
-            return "access_token"
+        case .getPopularMovies:
+            return "movie/popular"
         }
     }
     
@@ -33,7 +34,7 @@ enum APIRouter: URLRequestConvertible {
     //MARK: - Parameters
     private var parameters: Parameters? {
         switch self {
-        case .generateVideChatToken:
+        case .getPopularMovies:
             return nil
         }
     }
@@ -42,16 +43,18 @@ enum APIRouter: URLRequestConvertible {
     // MARK: - Headers
     private var queries: [Query]? {
         switch self {
-        case .generateVideChatToken(let channelId):
-            return [Query(key: "channel", value: channelId)]
+        case .getPopularMovies(let page):
+            return [
+                Query(key: "api_key", value: Constants.Parameters.apiKey),
+                Query(key: "page", value: "\(page)")
+            ]
         }
     }
     
     
     //MARK: - URL Request Convertible
     func asURLRequest() throws -> URLRequest {
-        
-        let url = try Constants.tokenGeneratorUrl.asURL()
+        let url = try Constants.baseURL.asURL()
         var components = URLComponents(string: "\(url)/\(path)")!
         
         if let queries = queries {
@@ -72,7 +75,6 @@ enum APIRouter: URLRequestConvertible {
         urlRequest.setValue(Constants.ContentType.json.rawValue, forHTTPHeaderField: Constants.HttpHeaderField.acceptType.rawValue)
         urlRequest.setValue(Constants.ContentType.json.rawValue, forHTTPHeaderField: Constants.HttpHeaderField.contentType.rawValue)
         
-        //        urlRequest.setValue("Bearer \(Constants.Parameters.token)", forHTTPHeaderField: Constants.HttpHeaderField.authentication.rawValue)
         
         //Encoding
         let encoding: ParameterEncoding = {

@@ -1,8 +1,8 @@
 //
-//  TRansparentUINavigation.swift
-//  TestRxSwift
+//  TransparentNavigation.swift
+//  AqarmabTest
 //
-//  Created by AnDy on 24/07/2021.
+//  Created by AnDy on 04/10/2021.
 //
 
 import UIKit
@@ -13,11 +13,15 @@ class TransparentNavigation: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         trasparentNavigationBar()
-        navigationBar.configureNavigationBar()
     }
     
+}
+
+
+// MARK: - Private Functions
+extension TransparentNavigation {
     
-    // MARK: - Transparent Navigation Bar
+    // MARK:  Transparent Navigation Bar
     private func trasparentNavigationBar() {
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
@@ -26,4 +30,3 @@ class TransparentNavigation: UINavigationController {
     }
     
 }
-

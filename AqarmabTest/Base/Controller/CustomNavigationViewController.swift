@@ -8,22 +8,32 @@
 import UIKit
 
 class CustomNavigationViewController: UIViewController {
-
+    
+    //MARK:- View Controller Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
+}
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+// MARK: - General Functions
+extension CustomNavigationViewController {
+    
+    // MARK: Set Navigation Large Title
+    func setNavigationLargeTitle(title: String) {
+        tabBarController?.navigationController?.navigationBar.prefersLargeTitles = true
+        tabBarController?.navigationItem.largeTitleDisplayMode = .always
+        tabBarController?.navigationController?.navigationBar.sizeToFit()
+        tabBarController?.title = title
     }
-    */
-
+    
+    
+    // MARK: Set Navigation Normal Title
+    func setNavigationNormalTitle(title: String) {
+        tabBarController?.navigationItem.largeTitleDisplayMode = .never
+        tabBarController?.navigationController?.navigationBar.sizeToFit()
+        tabBarController?.title = title
+    }
+    
 }

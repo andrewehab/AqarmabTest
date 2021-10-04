@@ -1,15 +1,15 @@
 //
 //  CollectionViewController.swift
-//  Najeemy
+//  AqarmabTest
 //
-//  Created by AnDy on 25/09/2021.
+//  Created by AnDy on 04/10/2021.
 //
 
 import UIKit
 import RxSwift
 import RxCocoa
 
-class CustomCollectionViewController: UIViewController {
+class CustomCollectionViewController: CustomNavigationViewController {
     
     //MARK: - Propertise
     let disposeBag = DisposeBag()
@@ -45,10 +45,20 @@ extension CustomCollectionViewController {
     
     
     // MARK: Configure Specific Collection View Cell
-    func configureSpecificCollectionViewCell<T: UICollectionViewCell>(collectionView: UICollectionView, indexPathRow: Int, completion: (_ cell: T)-> Void) {
-        if let cell = collectionView.cellForItem(at: IndexPath(row: indexPathRow, section: 0)) as? T {
-            completion(cell)
-        }
+    func configureSpecificCollectionViewCell<T: UICollectionViewCell>(collectionView: UICollectionView, indexPathRow: Int, completion: (T)-> Void) {
+        guard let cell = collectionView.cellForItem(at: IndexPath(row: indexPathRow, section: 0)) as? T  else { return }
+        completion(cell)
+    }
+    
+    
+    // MARK: Configure Collection View Pagination
+    func configureCollectionViewPagination<T: UICollectionViewCell>(collectionView: UICollectionView, completion: @escaping(T, IndexPath)-> Void) {
+        collectionView.rx
+            .willDisplayCell
+            .subscribe(onNext: { cell, indexPath in
+                guard let cell = cell as? T else { return }
+                completion(cell, indexPath)
+            }).disposed(by: disposeBag)
     }
     
 }

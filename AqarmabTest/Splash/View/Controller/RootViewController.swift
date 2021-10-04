@@ -1,9 +1,8 @@
 //
 //  RootViewController.swift
-//  Fatorty
+//  AqarmabTest
 //
-//  Created by Esraa Ragab on 7/11/19.
-//  Copyright © 2019 Esraa Mohamed Ragab. All rights reserved.
+//  Created by AnDy on 04/10/2021.
 //
 
 import UIKit
@@ -63,67 +62,11 @@ extension RootViewController {
     }
     
     
-    // MARK: Switch To Welcome Screen
-    func switchToWelcomeScreen() {
-        if let welcomeViewController = UIStoryboard(name: "Splash", bundle: nil).instantiateViewController(withIdentifier: "WelcomeViewController") as? WelcomeViewController {
-            let welcomeNavigationController = TransparentNavigation(rootViewController: welcomeViewController)
-            animateDismissTransition(to: welcomeNavigationController)
-        }
-    }
-    
-    
-    // MARK: Switch To Sign In
-    func switchToSignIn() {
-        if let signInViewController = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController {
-            let signInNavigationController = TransparentNavigation(rootViewController: signInViewController)
-            animateDismissTransition(to: signInNavigationController)
-        }
-    }
-    
-    
-    // MARK: Switch To Sign Up
-    func switchToSignUp() {
-        if let signUpViewController = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController {
-            let signUpNavigationController = TransparentNavigation(rootViewController: signUpViewController)
-            animateDismissTransition(to: signUpNavigationController)
-        }
-    }
-    
-    
-    // MARK: Switch To Complete Profile
-    func switchToCompleteProfile() {
-        if let completeProfileViewController = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "CompleteProfileViewController") as? CompleteProfileViewController {
-            let completeProfileNavigationController = TransparentNavigation(rootViewController: completeProfileViewController)
-            animateDismissTransition(to: completeProfileNavigationController)
-        }
-    }
-    
-    
-    // MARK: Switch To Home Screen
-    func switchToHome() {
-        if let tabViewController = UIStoryboard(name: "TabBar", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController {
-            let tabScreen = TransparentNavigation(rootViewController: tabViewController)
-            animateDismissTransition(to: tabScreen)
-        }
-    }
-    
-    
-    // MARK: Switch To Add Schedule
-    func switchToMyAppointments() {
-        if let tabViewController = UIStoryboard(name: "TabBar", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController {
-            tabViewController.tabBarViewModel.selectedTabBehaviorRelay.accept(.Appointment)
-            let tabScreen = TransparentNavigation(rootViewController: tabViewController)
-            animateDismissTransition(to: tabScreen)
-        }
-    }
-    
-    
-    // MARK: Switch To Profile
-    func switchToProfile() {
-        if let profileViewController = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController {
-            let profileNavigationController = TransparentNavigation(rootViewController: profileViewController)
-            animateDismissTransition(to: profileNavigationController)
-        }
+    // MARK: Switch To Popular Screen
+    func switchToPopularScreen() {
+        let welcomeViewController = UIStoryboard(name: "Splash", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController")
+        let welcomeNavigationController = TransparentNavigation(rootViewController: welcomeViewController)
+        animateDismissTransition(to: welcomeNavigationController)
     }
     
 }

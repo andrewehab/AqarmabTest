@@ -1,9 +1,8 @@
 //
-//  uiViewExtention.swift
-//  Core
+//  UIViewExtention.swift
+//  AqarmabTest
 //
-//  Created by Esraa Mohamed Ragab on 5/26/19.
-//  Copyright © 2019 Ibrahim. All rights reserved.
+//  Created by AnDy on 04/10/2021.
 //
 
 
@@ -20,20 +19,6 @@ extension UIView {
         set {
             layer.cornerRadius = newValue
             layer.masksToBounds = newValue > 0
-        }
-    }
-    
-    
-    // MARK: Circular Radius
-    @IBInspectable
-    var CircularRadius: Bool  {
-        set {
-            let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: [.allCorners], cornerRadii: CGSize(width: frame.width / 2, height: frame.height / 2))
-            let mask = CAShapeLayer()
-            mask.path = path.cgPath
-            self.layer.mask = mask
-        } get {
-            return false
         }
     }
     

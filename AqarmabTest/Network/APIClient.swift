@@ -1,8 +1,8 @@
 //
 //  APIClient.swift
-//  TestRxSwift
+//  AqarmabTest
 //
-//  Created by AnDy on 29/06/2021.
+//  Created by AnDy on 04/10/2021.
 //
 
 import Alamofire
@@ -10,9 +10,9 @@ import RxSwift
 
 class APIClient {
     
-    // MARK: - Generate Vide Chat Token
-    static func generateVideoChatToken(channelId: String) -> Observable<VideoToken> {
-        return Request.requestWithResult(APIRouter.generateVideChatToken(channelId: channelId))
+    // MARK: - Get Popular Movies
+    static func getPopularMovies(page: Int) -> Observable<Movies> {
+        return Request.requestWithResult(APIRouter.getPopularMovies(page: page))
     }
-        
+    
 }

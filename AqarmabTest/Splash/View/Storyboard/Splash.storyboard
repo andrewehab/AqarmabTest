@@ -6,144 +6,67 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="SF-Pro-Text-Regular.otf">
-            <string>SFProText-Regular</string>
-        </array>
-        <array key="SF-Pro-Text-Semibold.otf">
-            <string>SFProText-Semibold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Splash View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="SplashViewController" id="Y6W-OH-hqX" customClass="SplashViewController" customModule="Najeemy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SplashViewController" id="Y6W-OH-hqX" customClass="SplashViewController" customModule="AqarmabTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="OjQ-vx-EBS">
-                                <rect key="frame" x="84.5" y="414.5" width="245" height="67.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list.and.film" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mmg-xq-XF5">
+                                <rect key="frame" x="155" y="397.5" width="104" height="100.5"/>
+                                <color key="tintColor" red="0.99607843139999996" green="0.74117647060000003" blue="0.20392156859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="FMn-hj-pmm"/>
+                                    <constraint firstAttribute="width" secondItem="mmg-xq-XF5" secondAttribute="height" multiplier="1:1" id="wZH-7e-7hK"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="OjQ-vx-EBS" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="aiP-NP-12u"/>
-                            <constraint firstItem="OjQ-vx-EBS" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="hC5-Zy-4vQ"/>
+                            <constraint firstItem="mmg-xq-XF5" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="7G4-Bx-pJl"/>
+                            <constraint firstItem="mmg-xq-XF5" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="U25-3x-E1r"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23" y="44"/>
+            <point key="canvasLocation" x="-1545" y="-178"/>
         </scene>
-        <!--Welcome View Controller-->
-        <scene sceneID="enl-xL-Cv4">
+        <!--Tab Bar Controller-->
+        <scene sceneID="Uug-a7-ikH">
             <objects>
-                <viewController storyboardIdentifier="WelcomeViewController" id="k4w-HH-oet" customClass="WelcomeViewController" customModule="Najeemy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="B7N-zZ-vq5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gza-w0-yo0" customClass="GradientView" customModule="Najeemy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VyJ-ua-G9B">
-                                        <rect key="frame" x="0.0" y="272.5" width="414" height="351.5"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Welcome Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Sg7-VB-fib">
-                                                <rect key="frame" x="24" y="8" width="366" height="268.5"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find A Professional Doctor And Get An Appointment Right Away" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6O5-1n-WII">
-                                                <rect key="frame" x="24" y="300.5" width="366" height="43"/>
-                                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="18"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="Sg7-VB-fib" firstAttribute="top" secondItem="VyJ-ua-G9B" secondAttribute="top" constant="8" id="46x-Ty-GL8"/>
-                                            <constraint firstItem="6O5-1n-WII" firstAttribute="leading" secondItem="VyJ-ua-G9B" secondAttribute="leading" constant="24" id="7qu-9Q-p8u"/>
-                                            <constraint firstAttribute="bottom" secondItem="6O5-1n-WII" secondAttribute="bottom" constant="8" id="JZ5-cb-KAG"/>
-                                            <constraint firstAttribute="trailing" secondItem="Sg7-VB-fib" secondAttribute="trailing" constant="24" id="Jde-Cm-khb"/>
-                                            <constraint firstAttribute="trailing" secondItem="6O5-1n-WII" secondAttribute="trailing" constant="24" id="SNI-9k-XkI"/>
-                                            <constraint firstItem="6O5-1n-WII" firstAttribute="top" secondItem="Sg7-VB-fib" secondAttribute="bottom" constant="24" id="e3g-fq-0oW"/>
-                                            <constraint firstItem="Sg7-VB-fib" firstAttribute="leading" secondItem="VyJ-ua-G9B" secondAttribute="leading" constant="24" id="j9d-Zc-ZDa"/>
-                                        </constraints>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBX-2k-lgK">
-                                        <rect key="frame" x="24" y="790" width="366" height="48"/>
-                                        <color key="backgroundColor" red="0.090196078431372548" green="0.086274509803921567" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="4sK-Sr-8qc"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
-                                        <state key="normal" title="GET STARTED">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
-                                                <real key="value" value="24"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="QBX-2k-lgK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VyJ-ua-G9B" secondAttribute="bottom" constant="10" id="3b3-NV-Tu2"/>
-                                    <constraint firstItem="QBX-2k-lgK" firstAttribute="leading" secondItem="Gza-w0-yo0" secondAttribute="leading" constant="24" id="Aih-0c-5ph"/>
-                                    <constraint firstItem="VyJ-ua-G9B" firstAttribute="centerY" secondItem="Gza-w0-yo0" secondAttribute="centerY" id="WDC-xp-mq3"/>
-                                    <constraint firstAttribute="trailing" secondItem="QBX-2k-lgK" secondAttribute="trailing" constant="24" id="aBx-c9-MSC"/>
-                                    <constraint firstAttribute="trailing" secondItem="VyJ-ua-G9B" secondAttribute="trailing" id="kjD-h0-v0u"/>
-                                    <constraint firstItem="VyJ-ua-G9B" firstAttribute="centerX" secondItem="Gza-w0-yo0" secondAttribute="centerX" id="mCs-Hf-vOC"/>
-                                    <constraint firstItem="VyJ-ua-G9B" firstAttribute="leading" secondItem="Gza-w0-yo0" secondAttribute="leading" id="tJX-7J-QsT"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="topGradientColor">
-                                        <color key="value" red="0.17254901960784313" green="0.25490196078431371" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomGradientColor">
-                                        <color key="value" red="0.0" green="0.74509803921568629" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="startPointX">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="startPointY">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="endPointX">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="endPointY">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="frN-3i-HT5"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="frN-3i-HT5" firstAttribute="bottom" secondItem="QBX-2k-lgK" secondAttribute="bottom" constant="24" id="Nr4-gd-rKX"/>
-                            <constraint firstAttribute="bottom" secondItem="Gza-w0-yo0" secondAttribute="bottom" id="VND-vR-qRj"/>
-                            <constraint firstItem="Gza-w0-yo0" firstAttribute="top" secondItem="B7N-zZ-vq5" secondAttribute="top" id="aq0-kK-4Pu"/>
-                            <constraint firstItem="Gza-w0-yo0" firstAttribute="leading" secondItem="frN-3i-HT5" secondAttribute="leading" id="qBc-eT-dE1"/>
-                            <constraint firstItem="frN-3i-HT5" firstAttribute="trailing" secondItem="Gza-w0-yo0" secondAttribute="trailing" id="xY8-lY-MWm"/>
-                        </constraints>
-                    </view>
+                <tabBarController storyboardIdentifier="TabBarViewController" id="aCc-Om-sLr" sceneMemberID="viewController">
+                    <tabBar key="tabBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WX0-FX-rAb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.16862745100000001" green="0.16862745100000001" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.77254901960784317" green="0.58039215686274503" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
                     <connections>
-                        <outlet property="getStartedButton" destination="QBX-2k-lgK" id="ggQ-2T-qoQ"/>
+                        <segue destination="ZVz-rM-2Jr" kind="relationship" relationship="viewControllers" id="Frv-fx-M0Y"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tu1-ii-hzn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r8N-X2-Azt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="985.50724637681162" y="43.526785714285715"/>
+            <point key="canvasLocation" x="-679" y="-178"/>
+        </scene>
+        <!--Popular-->
+        <scene sceneID="BJi-eW-eXf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Popular" id="ZVz-rM-2Jr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="bX2-9E-J5k"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NlI-Dc-gJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-85" y="-178"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="245" height="67.5"/>
-        <image name="Welcome Logo" width="212" height="268.5"/>
+        <image name="list.and.film" catalog="system" width="128" height="86"/>
     </resources>
 </document>
